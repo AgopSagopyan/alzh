@@ -1,0 +1,9 @@
+name = "kasarlik"
+description = "aktif projeleri listeleyen tui"
+status = "active"
+tags = ["rust", "tui"]
+
+[[todo]]
+text = "dosya tipini parse et"
+done = true
+priority = "high"

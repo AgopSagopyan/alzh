@@ -24,6 +24,10 @@ fn read_todo() -> std::io::Result<HashMap<String, String>> {
 use std::fs::File;
 use std::io::prelude::*;
 
+mod init;
+use init::initialize_file;
+
+
 //fn main() -> std::io::Result<()> {
 //    let mut file = File::create("foo.txt")?;
 //    file.write_all(b"Hello, world!")?;
@@ -35,13 +39,16 @@ use std::io::prelude::*;
 
 
 fn main() -> std::io::Result<()> {
-    let vars = read_todo()?;
+
+    initialize_file();
+    /*    let vars = read_todo()?;
     println!("t1 = {}", vars["t1"]);
     if let Some(t2) = vars.get("t2") {
         println!("t2 = {t2}");
     }
-    Ok(())
     //read_todo();
+    */
+    Ok(())
 }
 
 
