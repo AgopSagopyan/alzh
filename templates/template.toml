@@ -1,0 +1,9 @@
+[project]
+name="${name}"
+version="${version}"
+tags=[]
+notes=[]
+description=""
+readme=""
+repository=""
+agent-rules=[]

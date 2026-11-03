@@ -1,22 +1,36 @@
 {
-  description = "Example flake with a devShell";
+  description = "alzh devShell";
 
-  inputs.nixpkgs.url = "https://channels.nixos.org/nixos-unstable/nixexprs.tar.zst";
+  inputs = {
+    nixpkgs.url = "https://channels.nixos.org/nixos-unstable/nixexprs.tar.zst";
+    rust-overlay = {
+      url = "github:oxalica/rust-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
 
   outputs =
-    { self, nixpkgs }:
+    {
+      self,
+      nixpkgs,
+      rust-overlay,
+    }:
     let
       system = "x86_64-linux";
-      pkgs = import nixpkgs { inherit system; };
+      pkgs = import nixpkgs {
+        inherit system;
+        overlays = [ rust-overlay.overlays.default ];
+      };
+      toolchain = pkgs.rust-bin.fromRustupToolchainFile ./rust-toolchain.toml;
     in
     {
-      devShells.x86_64-linux.default = pkgs.mkShell {
+      devShells.${system}.default = pkgs.mkShell {
+        packages = [ toolchain ];
         buildInputs = with pkgs; [
-          hello
-          cargo
+          #cargo
         ];
         shellHook = ''
-          echo "Welcome to the devShell!"
+          echo "Welcome to the alzh devShell!"
         '';
       };
     };

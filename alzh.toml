@@ -1,5 +1,27 @@
-[[note to self]]
-note1="once 'nix develop' calistir"
-note2="proje 'cargo run' ile derleniyor"
+[project]
+name = "alzh"
+todos = [
+    "kod yazilacak",
+    "yogurt alinacak",
+    "lol oynanacak",
+]
+description = ""
+notes = [
+    "once 'nix develop' calistir",
+    "proje 'cargo run' ile derleniyor",
+    "once 'jj commit -m' sonra 'jj bookmark set main -r @-' sonra 'jj git push'",
+]
+summary = """
+alzh projelerde kaldiginiz yeri alzheimer olsaniz bile hatirlamanizi saglayan bir arac
+calistiginiz projeleri ozetlerini notlarini ve taglarini otomatik olusturabilen ve sizin bunlari
+tek bir dashboardda gorebilmenizi saglayan bir cli ve tui programi 
 
-
+suan gelistirilme asamasinda mvp icin planlarimiz sunlardir 
+"""
+tags = [
+    "cli",
+    "tui",
+    "rust",
+    "toml",
+]
+version = "0.1.0"

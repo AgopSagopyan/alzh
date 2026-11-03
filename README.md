@@ -8,3 +8,5 @@ projenin fikri:
 yapilmasi gerekenler:
 
 - search edebilecegimiz bir dosya tipi olusturalim ve icinden bilgi okuyabilelim
+- agentlerin kullanabilecegi hale gelmeli
+- board yapacagiz
