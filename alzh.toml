@@ -25,6 +25,7 @@ notes = [
     "proje 'cargo run' ile derleniyor",
     "once 'jj commit -m' sonra 'jj bookmark set main -r @-' sonra 'jj git push'",
     "denmee123132",
+    "alzh todo add 'yogurt al' --today veya --week gibi kısayollar",
 ]
 
 [todo]
@@ -35,3 +36,9 @@ items = [
 
 [agent]
 rules = []
+
+[[todobeta]]
+created = ""
+done = false
+due = ""
+text = "lol oynanacak"
