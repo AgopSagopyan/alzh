@@ -1,4 +1,5 @@
-use crate::project::{Config, todo};
+use crate::manifest::Manifest;
+use crate::manifest::todo::parse::parse;
 use std::fs;
 use std::io::{self, ErrorKind};
 use std::path::Path;
@@ -18,10 +19,10 @@ pub fn run() -> std::io::Result<()> {
         }
     })?;
 
-    let mut config = Config::load(config_path)?;
-    config.project.todos = todo::parse(&contents);
-    config.save(config_path)?;
+    let mut manifest = Manifest::load(config_path)?;
+    manifest.todo.items = parse(&contents);
+    manifest.save(config_path)?;
 
-    println!("{} todo aktarildi", config.project.todos.len());
+    println!("{} todo aktarildi", manifest.todo.items.len());
     Ok(())
 }

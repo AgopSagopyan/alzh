@@ -1,16 +1,6 @@
 [project]
 name = "alzh"
-todos = [
-    "kod yazilacak",
-    "yogurt alinacak",
-    "lol oynanacak",
-]
 description = ""
-notes = [
-    "once 'nix develop' calistir",
-    "proje 'cargo run' ile derleniyor",
-    "once 'jj commit -m' sonra 'jj bookmark set main -r @-' sonra 'jj git push'",
-]
 summary = """
 alzh projelerde kaldiginiz yeri alzheimer olsaniz bile hatirlamanizi saglayan bir arac
 calistiginiz projeleri ozetlerini notlarini ve taglarini otomatik olusturabilen ve sizin bunlari
@@ -24,4 +14,24 @@ tags = [
     "rust",
     "toml",
 ]
+todos = [
+    "kod yazilacak",
+    "yogurt alinacak",
+    "lol oynanacak",
+]
 version = "0.1.0"
+notes = [
+    "once 'nix develop' calistir",
+    "proje 'cargo run' ile derleniyor",
+    "once 'jj commit -m' sonra 'jj bookmark set main -r @-' sonra 'jj git push'",
+    "denmee123132",
+]
+
+[todo]
+items = [
+    "kod yazilacak",
+    "lol oynanacak",
+]
+
+[agent]
+rules = []
